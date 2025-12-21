@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Life with Leyla</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Merriweather:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fdf8f3;
+      color: #5a4a42;
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-right: 30px;
+      text-decoration: none;
+      color: #5a4a42;
+      font-size: 14px;
+    }
+
+    .logo {
+      font-family: 'Edu NSW ACT Cursive', cursive;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      padding: 60px;
+      align-items: center;
+      gap: 60px;
+      justify-content: center;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      /* CAMBIO: Fuente Merriweather con peso 500 */
+      font-family: 'Merriweather', serif;
+      font-weight: 500;
+      font-size: 38px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .hero-text span {
+      font-style: italic;
+      font-size: 20px;
+    }
+
+    .hero-text button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #d8b7a6;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .hero img {
+      width: 300px;
+      border-radius: 0; /* Imagen cuadrada */
+    }
+
+    /* ELEVATE SECTION */
+    .elevate {
+      background-color: #f1d6c8;
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    .elevate small {
+      display: block;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      display: flex;
+      padding: 80px 60px;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about img {
+      width: 320px;
+    }
+
+    .about-text {
+      background-color: #f6e3d8;
+      padding: 40px;
+      max-width: 400px;
+    }
+
+    .about-text h2 {
+      /* CAMBIO: Fuente Merriweather con peso 500 */
+      font-family: 'Merriweather', serif;
+      font-weight: 500;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .about-text h3 {
+      /* CAMBIO: Fuente Merriweather con peso 500 */
+      font-family: 'Merriweather', serif;
+      font-weight: 500;
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .about-text button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #d8b7a6;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Life with Leyla</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Shop</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>DELMY LOPEZ<br>THE EMPOWERED</h1>
+      <span>glow getters</span><br>
+      <button>LEARN MORE</button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Leyla">
+  </section>
+
+  <section class="elevate">
+    ELEVATE YOUR LIFE
+    <small>ONE STEP AT A TIME</small>
+  </section>
+
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="About image">
+
+    <div class="about-text">
+      <h2>Welcome</h2>
+      <h3>I’m Leyla Rose</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed non dui eros. Tempus hendrerit ut lacus ut,
+        pharetra augue. Arcu dictum varius duis at.
+      </p>
+      <button>ABOUT ME</button>
+    </div>
+  </section>
+
+</body>
+</html>
