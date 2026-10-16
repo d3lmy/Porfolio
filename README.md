@@ -1,541 +1,183 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desing with Intent | Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Luxury Editorial Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/__l5e/assets-v1/10727ae7-4f42-4011-9e48-bacf24d02931/delmy-portrait.png"/><link rel="stylesheet" href="/assets/styles-D6o0Il6n.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" data-precedence="default"/><title>Delmy Lopez | Creative &amp; Data Specialist</title><meta name="description" content="Delmy Lopez — legal document &amp; CRM data analyst, web page designer and content creator in Guatemala."/><meta property="og:title" content="Delmy Lopez | Creative &amp; Data Specialist"/><meta property="og:description" content="Precision in data. Elegance in web &amp; content."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><link rel="modulepreload" href="/assets/index-BQng53LO.js"/><link rel="modulepreload" href="/assets/routes-IZLANB7-.js"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<style>
+	#lovable-badge {
+		--badge-bg: #1b1b1b;
+		--badge-text: #c5c1b9;
+		--badge-text-hover: #dcdad5;
+		--badge-radius: 6px;
+		--badge-padding: 8px;
+		--badge-gap: 6px;
+		--badge-shadow: 
+			0 0 0 1px rgba(0, 0, 0, 0.88),
+			0 1px 0 0 rgba(0, 0, 0, 0.04),
+			0 2px 2px -1px rgba(0, 0, 0, 0.08),
+			0 4px 4px -2px rgba(0, 0, 0, 0.08),
+			0 8px 8px -4px rgba(0, 0, 0, 0.08),
+			0 16px 16px -8px rgba(0, 0, 0, 0.08);
+		--badge-transition-duration: 0.2s;
+		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
+		--focus-color: #575ECF;
+		--focus-offset: 2px;
+		--focus-width: 2px;
+		
+		position: fixed;
+		bottom: 12px;
+		right: 12px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		z-index: 1000000;
+		background-color: var(--badge-bg) !important;
+		color: var(--badge-text) !important;
+		border-radius: var(--badge-radius);
+		box-shadow: var(--badge-shadow) !important;
+		font-size: 12px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-weight: 400 !important;
+		text-transform: none !important;
+		font-feature-settings: normal !important;
+		transform: translateZ(0);
+		will-change: transform, opacity;
+		transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
+	}
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        burgundy: {
-                            950: '#120508',
-                            900: '#1F0B10',
-                            800: '#2E0F16',
-                            700: '#421620',
-                            600: '#5C1D2C'
-                        },
-                        rosebeige: {
-                            light: '#F8EFEA',
-                            DEFAULT: '#F3E3D3',
-                            muted: '#E8C3B9',
-                            dark: '#D4A69A'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        script: ['"Sacramento"', 'cursive']
-                    }
-                }
-            }
-        }
-    </script>
+	#lovable-badge.closing {
+		opacity: 0;
+		pointer-events: none;
+	}
 
-    <style>
-        body {
-            background-color: #120508;
-            color: #F3E3D3;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-        }
+	#lovable-badge-cta {
+		display: flex;
+		align-items: baseline;
+		gap: var(--badge-gap);
+		box-sizing: border-box;
+		padding: 4px var(--badge-padding) 0;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
 
-        /* Arch Image Framing Effect */
-        .arch-frame {
-            border-top-left-radius: 500px;
-            border-top-right-radius: 500px;
-            overflow: hidden;
-            position: relative;
-        }
+	#lovable-badge-cta:hover {
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--badge-text-hover);
+	}
 
-        /* Glassmorphism & Custom Glows */
-        .luxury-glass {
-            background: rgba(46, 15, 22, 0.4);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(243, 227, 211, 0.12);
-        }
+	#lovable-badge-cta:active {
+		transform: scale(0.98);
+	}
 
-        .luxury-border {
-            border: 1px solid rgba(243, 227, 211, 0.15);
-        }
+	#lovable-badge-cta:focus {
+		outline: none;
+	}
 
-        .luxury-hover-card {
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        }
+	#lovable-badge-cta:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: var(--focus-offset);
+		z-index: 1;
+	}
 
-        .luxury-hover-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(232, 195, 185, 0.4);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-        }
+	#lovable-badge-text {
+		line-height: 1;
+	}
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #120508;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2E0F16;
-            border-radius: 4px;
-            border: 1px solid rgba(243, 227, 211, 0.1);
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #421620;
-        }
-    </style>
-</head>
-<body class="selection:bg-rosebeige-muted selection:text-burgundy-950">
+	#lovable-badge-logo {
+		position: relative;
+		display: block;
+		width: 52px;
+		height: 12px;
+	}
 
-    <!-- NAVIGATION BAR -->
-    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5 px-6 md:px-16 luxury-glass border-b border-rosebeige/10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Brand Logo Initials -->
-            <a href="#" class="font-serif text-2xl tracking-widest text-rosebeige font-semibold flex items-center gap-2 group">
-                <span class="w-10 h-10 rounded-full border border-rosebeige/30 flex items-center justify-center text-sm group-hover:border-rosebeige transition-colors">AM</span>
-                <span class="hidden sm:inline text-xs tracking-widest text-rosebeige-muted font-sans uppercase">Studio</span>
-            </a>
+	#lovable-badge-logo svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
-            <!-- Nav Links -->
-            <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest uppercase font-medium text-rosebeige/80">
-                <a href="#work" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">Work</a>
-                <a href="#about" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">About</a>
-                <a href="#approach" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">Approach</a>
-                <a href="#services" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">Services</a>
-            </div>
+	#lovable-badge-divider {
+		width: 1px;
+		height: 24px;
+		background-color: rgba(255, 255, 255, 0.04);
+		flex-shrink: 0;
+	}
 
-            <!-- CTA Pill Button -->
-            <a href="#contact" class="px-6 py-2.5 rounded-full border border-rosebeige/40 text-xs tracking-widest uppercase text-rosebeige hover:bg-rosebeige hover:text-burgundy-950 transition-all duration-300 font-medium">
-                Let's Talk
-            </a>
-        </div>
-    </nav>
+	#lovable-badge-close {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
+		flex-shrink: 0;
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen pt-32 pb-16 px-6 md:px-16 relative flex flex-col justify-between overflow-hidden bg-gradient-to-b from-burgundy-900 via-burgundy-950 to-burgundy-950">
-        <!-- Background Ambient Glow -->
-        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-burgundy-700/30 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-rosebeige-dark/10 rounded-full blur-3xl pointer-events-none"></div>
+	#lovable-badge-close:hover {
+		background: rgba(255, 255, 255, 0.04);
+	}
 
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
-            
-            <!-- Hero Left Content -->
-            <div class="lg:col-span-7 z-10 space-y-8">
-                <div class="flex items-center space-x-3">
-                    <span class="w-8 h-[1px] bg-rosebeige-muted"></span>
-                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted font-medium">UI/UX Designer & Visual Specialist</span>
-                </div>
+	#lovable-badge-close:active {
+		transform: scale(0.92);
+	}
 
-                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-rosebeige leading-[1.05]">
-                    DESIGN <br>
-                    <span class="italic font-normal text-rosebeige-muted">with</span> INTENT
-                </h1>
+	#lovable-badge-close:focus {
+		outline: none;
+	}
 
-                <p class="text-base md:text-lg text-rosebeige/70 font-light max-w-xl leading-relaxed">
-                    I design digital experiences and evaluate visual media that are beautiful, intuitive, aesthetically elevated, and built to convert.
-                </p>
+	#lovable-badge-close:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: calc(var(--focus-offset) * -1);
+		z-index: 1;
+	}
 
-                <!-- Hero Action Buttons -->
-                <div class="flex flex-wrap items-center gap-5 pt-4">
-                    <a href="#work" class="group px-8 py-4 rounded-full bg-rosebeige text-burgundy-950 font-medium text-xs tracking-widest uppercase flex items-center space-x-3 hover:bg-rosebeige-muted transition-all duration-300 shadow-lg">
-                        <span>View My Work</span>
-                        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                    
-                    <button onclick="downloadCV()" class="px-8 py-4 rounded-full border border-rosebeige/30 text-rosebeige font-medium text-xs tracking-widest uppercase flex items-center space-x-3 hover:border-rosebeige transition-all duration-300">
-                        <span>Download CV</span>
-                        <i class="fa-solid fa-download text-xs"></i>
-                    </button>
-                </div>
-            </div>
+	#lovable-badge-close svg path {
+		fill: var(--badge-text);
+		transition: fill var(--badge-transition-duration) ease;
+	}
 
-            <!-- Hero Right Arch Image -->
-            <div class="lg:col-span-5 flex justify-center items-center relative z-10">
-                <div class="relative w-full max-w-md">
-                    
-                    <!-- Decorative Arch Border Glow -->
-                    <div class="absolute -inset-1 rounded-t-[500px] bg-gradient-to-b from-rosebeige/30 to-transparent blur-sm"></div>
+	#lovable-badge-close:hover svg path {
+		fill: var(--badge-text-hover);
+	}
 
-                    <!-- Main Arch Frame -->
-                    <div class="arch-frame w-full aspect-[3/4] luxury-border bg-burgundy-800 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
-                             alt="Portrait" 
-                             class="w-full h-full object-cover object-center filter brightness-95 contrast-105 hover:scale-105 transition-transform duration-700">
-                    </div>
+	@media (prefers-reduced-motion: reduce) {
+		#lovable-badge,
+		#lovable-badge-cta,
+		#lovable-badge-close,
+		#lovable-badge-close svg path {
+			transition: none;
+		}
+		
+		#lovable-badge-cta:active,
+		#lovable-badge-close:active {
+			transform: none;
+		}
+	}
 
-                    <!-- Decorative Badge Overlay -->
-                    <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-full border border-rosebeige/30 luxury-glass flex items-center justify-center p-2 animate-spin-slow">
-                        <svg class="w-full h-full text-rosebeige-muted" viewBox="0 0 100 100">
-                            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
-                            <text class="text-[10px] tracking-widest font-sans uppercase fill-current">
-                                <textPath href="#circlePath">
-                                    • USER-CENTERED • IMPACT-DRIVEN 
-                                </textPath>
-                            </text>
-                        </svg>
-                    </div>
-
-                    <!-- Initials Emblem Badge -->
-                    <div class="absolute bottom-4 right-4 w-16 h-16 rounded-full bg-burgundy-900/90 border border-rosebeige/40 flex items-center justify-center text-rosebeige font-serif text-xl shadow-xl">
-                        AM
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- HERO TICKER INFO BAR -->
-        <div class="max-w-7xl mx-auto w-full pt-16 border-t border-rosebeige/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs tracking-widest text-rosebeige/60 uppercase">
-            <div>
-                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Based In</span>
-                <span class="text-rosebeige">Guatemala City</span>
-            </div>
-            <div>
-                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Available For</span>
-                <span class="text-rosebeige">Freelance & Full-time</span>
-            </div>
-            <div>
-                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Signature</span>
-                <span class="font-script text-base text-rosebeige lowercase">Anna Moreau</span>
-            </div>
-            <div>
-                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Mission</span>
-                <span class="text-rosebeige">Meaningful Digital Aesthetics</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURED WORK SECTION -->
-    <section id="work" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-950">
-        <div class="max-w-7xl mx-auto">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Selected Projects</span>
-                    <h2 class="font-serif text-4xl md:text-6xl text-rosebeige font-light">Featured Work</h2>
-                </div>
-                <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige-muted hover:text-rosebeige transition-colors flex items-center space-x-2 border-b border-rosebeige/20 pb-1 w-max">
-                    <span>View All Projects</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Project Card 1 -->
-                <div onclick="openModal('LUMINA', 'E-Commerce Redesign', 'A luxury skincare e-commerce experience focusing on minimalist typography, rich textures, and seamless conversion paths.', 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800')" 
-                     class="group cursor-pointer luxury-hover-card luxury-glass rounded-2xl overflow-hidden border border-rosebeige/10 p-4">
-                    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
-                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" 
-                             alt="Lumina" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 right-3 w-10 h-10 rounded-full luxury-glass border border-rosebeige/30 flex items-center justify-center text-rosebeige opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="px-2 pb-2">
-                        <h3 class="font-serif text-2xl text-rosebeige mb-1 group-hover:text-rosebeige-muted transition-colors">LUMINA</h3>
-                        <p class="text-xs tracking-wider text-rosebeige-muted uppercase">E-Commerce Redesign</p>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div onclick="openModal('VIREO STUDIO', 'Creative Portfolio Website', 'Editorial digital showcase for a haute couture fashion photography atelier based in Paris.', 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800')" 
-                     class="group cursor-pointer luxury-hover-card luxury-glass rounded-2xl overflow-hidden border border-rosebeige/10 p-4">
-                    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" 
-                             alt="Vireo Studio" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 right-3 w-10 h-10 rounded-full luxury-glass border border-rosebeige/30 flex items-center justify-center text-rosebeige opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="px-2 pb-2">
-                        <h3 class="font-serif text-2xl text-rosebeige mb-1 group-hover:text-rosebeige-muted transition-colors">VIREO STUDIO</h3>
-                        <p class="text-xs tracking-wider text-rosebeige-muted uppercase">Creative Portfolio Website</p>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div onclick="openModal('AURORA LIVING', 'Luxury Brand Website', 'An immersive web experience celebrating high-end architectural interior design and bespoke furniture.', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800')" 
-                     class="group cursor-pointer luxury-hover-card luxury-glass rounded-2xl overflow-hidden border border-rosebeige/10 p-4">
-                    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
-                             alt="Aurora Living" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 right-3 w-10 h-10 rounded-full luxury-glass border border-rosebeige/30 flex items-center justify-center text-rosebeige opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
-                    <div class="px-2 pb-2">
-                        <h3 class="font-serif text-2xl text-rosebeige mb-1 group-hover:text-rosebeige-muted transition-colors">AURORA LIVING</h3>
-                        <p class="text-xs tracking-wider text-rosebeige-muted uppercase">Luxury Brand Website</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- MY APPROACH SECTION -->
-    <section id="approach" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-900/40">
-        <div class="max-w-7xl mx-auto">
-            <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Methodology</span>
-            <h2 class="font-serif text-4xl md:text-5xl text-rosebeige font-light mb-16">My Approach</h2>
-
-            <!-- 5 Steps Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                
-                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
-                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">01</span>
-                    <i class="fa-solid fa-magnifying-glass text-rosebeige-muted text-lg mb-4"></i>
-                    <h3 class="font-serif text-xl text-rosebeige mb-2">DISCOVER</h3>
-                    <p class="text-xs text-rosebeige/70 leading-relaxed">I dive deep into your goals, audience, brand DNA, and aesthetic challenges.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
-                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">02</span>
-                    <i class="fa-solid fa-compass text-rosebeige-muted text-lg mb-4"></i>
-                    <h3 class="font-serif text-xl text-rosebeige mb-2">DEFINE</h3>
-                    <p class="text-xs text-rosebeige/70 leading-relaxed">I craft visual strategy, information architecture, and core user flows.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
-                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">03</span>
-                    <i class="fa-solid fa-palette text-rosebeige-muted text-lg mb-4"></i>
-                    <h3 class="font-serif text-xl text-rosebeige mb-2">DESIGN</h3>
-                    <p class="text-xs text-rosebeige/70 leading-relaxed">I create UI that's stunning, intuitive, elevated, and strictly on-brand.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
-                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">04</span>
-                    <i class="fa-solid fa-code text-rosebeige-muted text-lg mb-4"></i>
-                    <h3 class="font-serif text-xl text-rosebeige mb-2">BUILD</h3>
-                    <p class="text-xs text-rosebeige/70 leading-relaxed">I collaborate with developers or build directly for pixel-perfect delivery.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
-                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">05</span>
-                    <i class="fa-solid fa-sliders text-rosebeige-muted text-lg mb-4"></i>
-                    <h3 class="font-serif text-xl text-rosebeige mb-2">REFINE</h3>
-                    <p class="text-xs text-rosebeige/70 leading-relaxed">I test, iterate, and optimize for the highest quality user experience.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CASE STUDIES SECTION -->
-    <section class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-950">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex items-center justify-between mb-16">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Detailed Analysis</span>
-                    <h2 class="font-serif text-4xl md:text-5xl text-rosebeige font-light">Case Studies</h2>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Case Study 1 -->
-                <div class="luxury-glass p-6 rounded-2xl border border-rosebeige/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-serif text-rosebeige-muted/60 mb-2 block">01</span>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-3">LUMINA RESTRUCTURING</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed mb-6">How we increased online conversions by 62% with a refined editorial aesthetic and frictionless checkout flow.</p>
-                    </div>
-                    <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige hover:text-rosebeige-muted flex items-center space-x-2">
-                        <span>View Case Study</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Case Study 2 -->
-                <div class="luxury-glass p-6 rounded-2xl border border-rosebeige/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-serif text-rosebeige-muted/60 mb-2 block">02</span>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-3">VIREO BRAND DIRECTION</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed mb-6">Redesigning a high-fashion atelier portfolio that tells an authentic visual narrative through layout & motion.</p>
-                    </div>
-                    <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige hover:text-rosebeige-muted flex items-center space-x-2">
-                        <span>View Case Study</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Case Study 3 -->
-                <div class="luxury-glass p-6 rounded-2xl border border-rosebeige/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-serif text-rosebeige-muted/60 mb-2 block">03</span>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-3">AURORA DIGITAL EXPERIENCE</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed mb-6">Building a boutique digital presence that inspires architects, high-net-worth clients, and luxury buyers.</p>
-                    </div>
-                    <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige hover:text-rosebeige-muted flex items-center space-x-2">
-                        <span>View Case Study</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT I DO / SERVICES SECTION -->
-    <section id="services" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-900/60">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <div class="lg:col-span-4">
-                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Capabilities</span>
-                    <h2 class="font-serif text-4xl md:text-5xl text-rosebeige font-light mb-6">Strategic Design. Seamless Experience. Real Impact.</h2>
-                    <p class="text-xs text-rosebeige/70 leading-relaxed mb-8">Elevating digital footprints with an eye for high fashion, symmetry, balance, and modern user experience excellence.</p>
-                </div>
-
-                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    
-                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
-                        <i class="fa-solid fa-crop-simple text-rosebeige-muted text-2xl mb-4"></i>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-2">UI/UX DESIGN</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed">User-centered interfaces that look stunning, feel fluid, and work effortlessly across all device sizes.</p>
-                    </div>
-
-                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
-                        <i class="fa-solid fa-desktop text-rosebeige-muted text-2xl mb-4"></i>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-2">WEB DESIGN</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed">Modern, responsive websites that elevate your brand story and engage users with memorable interactions.</p>
-                    </div>
-
-                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
-                        <i class="fa-solid fa-eye text-rosebeige-muted text-2xl mb-4"></i>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-2">VISUAL CURATION & AI EVALUATION</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed">Expert qualitative image critique, aesthetic evaluation, lighting assessment, and visual data curation.</p>
-                    </div>
-
-                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
-                        <i class="fa-solid fa-crown text-rosebeige-muted text-2xl mb-4"></i>
-                        <h3 class="font-serif text-2xl text-rosebeige mb-2">BRANDING & IDENTITY</h3>
-                        <p class="text-xs text-rosebeige/70 leading-relaxed">Cohesive visual identities, typography guidelines, and color systems that make your brand unforgettable.</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CONTACT SECTION -->
-    <footer id="contact" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-950 relative">
-        <div class="max-w-7xl mx-auto">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-                
-                <!-- Footer CTA Left -->
-                <div class="lg:col-span-7 space-y-8">
-                    <h2 class="font-serif text-5xl md:text-7xl text-rosebeige font-light leading-tight">
-                        Let's create <br>
-                        <span class="italic font-normal text-rosebeige-muted">something</span> extraordinary.
-                    </h2>
-
-                    <a href="mailto:hello@annamoreau.studio" class="inline-flex items-center space-x-4 px-8 py-4 rounded-full border border-rosebeige/30 text-rosebeige text-xs tracking-widest uppercase hover:bg-rosebeige hover:text-burgundy-950 transition-all duration-300">
-                        <span>Let's Work Together</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Footer Info Right -->
-                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
-                    <div class="space-y-4 text-xs tracking-widest uppercase text-rosebeige/80">
-                        <div class="flex items-center space-x-4">
-                            <i class="fa-regular fa-envelope text-rosebeige-muted"></i>
-                            <span>hello@annamoreau.studio</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fa-brands fa-instagram text-rosebeige-muted"></i>
-                            <span>@annam.design</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fa-brands fa-linkedin-in text-rosebeige-muted"></i>
-                            <span>linkedin.com/in/annamoreau</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fa-solid fa-location-dot text-rosebeige-muted"></i>
-                            <span>Guatemala City, GT</span>
-                        </div>
-                    </div>
-
-                    <!-- Steve Jobs Quote Badge -->
-                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 text-xs italic font-serif text-rosebeige/70 leading-relaxed">
-                        "Design is not just what it looks like and feels like. Design is how it works."
-                        <span class="block text-right text-[10px] uppercase font-sans text-rosebeige-muted mt-2 font-normal">— Steve Jobs</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Bottom Copyright -->
-            <div class="pt-8 border-t border-rosebeige/10 flex flex-col sm:flex-row items-center justify-between text-[10px] tracking-widest text-rosebeige-muted uppercase gap-4">
-                <p>© 2026 ANNA MOREAU STUDIO. ALL RIGHTS RESERVED.</p>
-                <p class="tracking-widest">STRATEGY • CREATIVITY • PURPOSE</p>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- INTERACTIVE PROJECT MODAL -->
-    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-burgundy-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-burgundy-900 border border-rosebeige/20 rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-rosebeige hover:text-rosebeige-muted text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="aspect-video rounded-xl overflow-hidden mb-6">
-                <img id="modalImg" src="" alt="Project" class="w-full h-full object-cover">
-            </div>
-            <span id="modalCategory" class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-1"></span>
-            <h3 id="modalTitle" class="font-serif text-3xl text-rosebeige mb-3"></h3>
-            <p id="modalDesc" class="text-xs text-rosebeige/80 leading-relaxed mb-6"></p>
-            <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-rosebeige text-burgundy-950 text-xs uppercase tracking-widest font-medium">Close Overview</button>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT FOR INTERACTIVITY -->
-    <script>
-        // Modal functions
-        function openModal(title, category, desc, imgSrc) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalCategory').innerText = category;
-            document.getElementById('modalDesc').innerText = desc;
-            document.getElementById('modalImg').src = imgSrc;
-            
-            const modal = document.getElementById('projectModal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('projectModal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        // CV Download trigger
-        function downloadCV() {
-            const msg = "CV Download triggered! (Replace with your direct PDF download link)";
-            const alertBox = document.createElement('div');
-            alertBox.className = "fixed bottom-6 right-6 z-50 px-6 py-3 rounded-xl luxury-glass border border-rosebeige/30 text-rosebeige text-xs tracking-wider uppercase shadow-2xl";
-            alertBox.innerText = msg;
-            document.body.appendChild(alertBox);
-            setTimeout(() => alertBox.remove(), 3000);
-        }
-    </script>
-</body>
-</html>
+	@media (prefers-contrast: high) {
+		#lovable-badge {
+			--badge-bg: #000;
+			--badge-text: #fff;
+			--badge-text-hover: #fff;
+			border: 2px solid currentColor;
+		}
+		
+		#lovable-badge-cta:focus-visible,
+		#lovable-badge-close:focus-visible {
+			outline-width: 3px;
+		}
+	}
+</style>
+<script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script><script defer src="/__l5e/events.124894084da8c432.js" data-artifact-kind="dwl_content_hash" data-artifact-id="e1a8148361e0beb362d9cee4763b9b776ac702c8a1e37750479a34658ab18709" data-commit-sha="1cc882443741c7f7e5f9965ec51cfd98630e8143" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MGN2d3Q3ZDJ0OGIwYW05ZDhwc2F4cWZ3eCIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiJlMWE4MTQ4MzYxZTBiZWIzNjJkOWNlZTQ3NjNiOWI3NzZhYzcwMmM4YTFlMzc3NTA0NzlhMzQ2NThhYjE4NzA5IiwiY29tbWl0X3NoYSI6IjFjYzg4MjQ0Mzc0MWM3ZjdlNWY5OTY1ZWM1MWNmZDk4NjMwZTgxNDMiLCJleHAiOjE3OTQ3MTUyMjF9.MvTdzadoHVbVTETZ5FnP8vMAEShq6IuxddaSP5guR_4"></script><meta name="twitter:title" content="Delmy Lopez | Creative &amp;amp; Data Specialist"><meta name="twitter:description" content="Precision in data. Elegance in web &amp;amp; content."><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_60cvwt7d2t8b0am9d8psaxqfwx/62135bbd5b366bb031946f468be931da_1792119314192.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_60cvwt7d2t8b0am9d8psaxqfwx/62135bbd5b366bb031946f468be931da_1792119314192.png"></head><body><!--$--><div><header class="fixed inset-x-0 top-0 z-50 border-b border-border bg-burgundy-950/80 backdrop-blur-md"><div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"><a href="#" class="flex items-center gap-2 font-serif text-2xl font-light tracking-wider text-rose-soft hover:text-rose-gold"><span class="inline-block h-2 w-2 rounded-full bg-rose-gold"></span> DELMY LOPEZ</a><nav class="hidden items-center space-x-8 text-xs uppercase tracking-widest text-muted-foreground md:flex"><a href="#about" class="transition-colors hover:text-rose-gold capitalize">about</a><a href="#education" class="transition-colors hover:text-rose-gold capitalize">education</a><a href="#experience" class="transition-colors hover:text-rose-gold capitalize">experience</a><a href="#certifications" class="transition-colors hover:text-rose-gold capitalize">certifications</a><a href="#skills" class="transition-colors hover:text-rose-gold capitalize">skills</a><a href="#contact" class="transition-colors hover:text-rose-gold capitalize">contact</a></nav><a href="mailto:marylenalopez.d@gmail.com" class="hidden rounded-full border border-rose-gold/30 px-4 py-2 text-xs uppercase tracking-widest text-rose-gold transition-all hover:bg-rose-gold hover:text-burgundy-950 sm:inline-flex">Get in Touch</a><button aria-label="Menu" class="text-rose-soft md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><section id="about" class="relative flex min-h-screen items-center justify-center overflow-hidden pb-16 pt-28"><div class="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-burgundy-700/20 blur-3xl"></div><div class="pointer-events-none absolute bottom-10 right-0 h-96 w-96 rounded-full bg-rose-accent/10 blur-3xl"></div><div class="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-12"><div class="order-2 space-y-6 text-center md:order-1 md:col-span-7 md:text-left"><div class="inline-flex items-center gap-2 rounded-full border border-rose-gold/20 bg-burgundy-800/80 px-3 py-1 text-xs uppercase tracking-widest text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-3.5 w-3.5" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> Data Analyst, Web Page Design &amp; Content Creator</div><h1 class="font-serif text-4xl font-light leading-tight tracking-tight text-rose-soft sm:text-6xl lg:text-7xl">Precision in Data.<br/><span class="italic font-normal text-rose-gold">Elegance</span> in Web &amp; Content.</h1><p class="mx-auto max-w-xl text-base font-light leading-relaxed text-muted-foreground sm:text-lg md:mx-0">Hello, I&#x27;m <strong class="font-normal text-rose-soft">Delmy Lopez</strong>. I specialize in critical legal document verification, CRM data processing, high attention-to-detail analysis, creative digital marketing strategy, and <span class="font-normal">web design</span>.</p><div class="grid grid-cols-3 gap-4 border-t border-border pt-4"><div><span class="block font-serif text-2xl text-rose-gold sm:text-3xl">100%</span><span class="text-xs uppercase tracking-wider text-muted-foreground">Accuracy</span></div><div><span class="block font-serif text-2xl text-rose-gold sm:text-3xl">3+ Yrs</span><span class="text-xs uppercase tracking-wider text-muted-foreground">Experience</span></div><div><span class="block font-serif text-2xl text-rose-gold sm:text-3xl">7+</span><span class="text-xs uppercase tracking-wider text-muted-foreground">Certificates</span></div></div><div class="flex flex-wrap justify-center gap-4 pt-4 md:justify-start"><a href="#experience" class="rounded-full bg-rose-gold px-6 py-3 text-xs font-medium uppercase tracking-widest text-burgundy-950 shadow-lg shadow-rose-gold/10 transition-all hover:bg-rose-soft">View Experience</a><a href="#contact" class="rounded-full border border-rose-gold/40 px-6 py-3 text-xs uppercase tracking-widest text-rose-gold transition-all hover:bg-rose-gold/10">Contact Me</a></div></div><div class="order-1 flex justify-center md:order-2 md:col-span-5"><div class="group relative w-full max-w-xs sm:max-w-sm"><div class="absolute -inset-1 rounded-[180px] bg-gradient-to-b from-rose-gold/40 via-burgundy-700/30 to-rose-accent/20 opacity-70 blur-lg transition duration-500 group-hover:opacity-100"></div><div class="relative overflow-hidden rounded-b-3xl rounded-t-[180px] border border-rose-gold/30 bg-burgundy-900/80 p-2 shadow-2xl"><div class="arch-frame relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-gradient-to-b from-burgundy-800 to-burgundy-950"><img src="/__l5e/assets-v1/10727ae7-4f42-4011-9e48-bacf24d02931/delmy-portrait.png" alt="Delmy Lopez" class="h-full w-full object-cover object-[38%_center] transition-transform duration-700 group-hover:scale-105"/><div class="absolute inset-0 bg-gradient-to-t from-burgundy-950/80 via-transparent to-transparent"></div></div></div></div></div></div></section><section id="education" class="border-t border-border bg-burgundy-900/60 py-20"><div class="mx-auto max-w-7xl px-6"><div class="mx-auto mb-16 max-w-2xl text-center"><h2 class="mb-2 text-xs uppercase tracking-widest text-rose-gold">Academic Background</h2><h3 class="font-serif text-3xl font-light text-rose-soft sm:text-5xl">Higher Education</h3><div class="mx-auto mt-4 h-0.5 w-12 bg-rose-gold"></div></div><div class="glass-card mx-auto max-w-4xl rounded-2xl p-8"><div class="mb-6 flex flex-col items-start justify-between gap-4 border-b border-border pb-6 md:flex-row md:items-center"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">Currently Enrolled • 1st Year, 2nd Semester</span><h4 class="mt-1 font-serif text-3xl text-rose-soft sm:text-4xl">Licenciatura en Mercadotecnia (Marketing)</h4><p class="mt-2 flex items-center gap-1.5 text-sm font-light text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap h-4 w-4 text-rose-gold" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg> Universidad Mariano Gálvez de Guatemala</p></div><div class="whitespace-nowrap rounded-full border border-rose-gold/30 bg-burgundy-800 px-4 py-2 text-xs font-medium uppercase tracking-wider text-rose-gold">In Progress</div></div><h5 class="mb-4 flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-4 w-4" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1
