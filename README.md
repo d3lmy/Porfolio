@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desing with Intent | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Luxury Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            950: '#120508',
+                            900: '#1F0B10',
+                            800: '#2E0F16',
+                            700: '#421620',
+                            600: '#5C1D2C'
+                        },
+                        rosebeige: {
+                            light: '#F8EFEA',
+                            DEFAULT: '#F3E3D3',
+                            muted: '#E8C3B9',
+                            dark: '#D4A69A'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Sacramento"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #120508;
+            color: #F3E3D3;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Arch Image Framing Effect */
+        .arch-frame {
+            border-top-left-radius: 500px;
+            border-top-right-radius: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Glassmorphism & Custom Glows */
+        .luxury-glass {
+            background: rgba(46, 15, 22, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(243, 227, 211, 0.12);
+        }
+
+        .luxury-border {
+            border: 1px solid rgba(243, 227, 211, 0.15);
+        }
+
+        .luxury-hover-card {
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .luxury-hover-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(232, 195, 185, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #120508;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2E0F16;
+            border-radius: 4px;
+            border: 1px solid rgba(243, 227, 211, 0.1);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #421620;
+        }
+    </style>
+</head>
+<body class="selection:bg-rosebeige-muted selection:text-burgundy-950">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5 px-6 md:px-16 luxury-glass border-b border-rosebeige/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo Initials -->
+            <a href="#" class="font-serif text-2xl tracking-widest text-rosebeige font-semibold flex items-center gap-2 group">
+                <span class="w-10 h-10 rounded-full border border-rosebeige/30 flex items-center justify-center text-sm group-hover:border-rosebeige transition-colors">AM</span>
+                <span class="hidden sm:inline text-xs tracking-widest text-rosebeige-muted font-sans uppercase">Studio</span>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest uppercase font-medium text-rosebeige/80">
+                <a href="#work" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">Work</a>
+                <a href="#about" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">About</a>
+                <a href="#approach" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">Approach</a>
+                <a href="#services" class="hover:text-rosebeige transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rosebeige hover:after:w-full after:transition-all">Services</a>
+            </div>
+
+            <!-- CTA Pill Button -->
+            <a href="#contact" class="px-6 py-2.5 rounded-full border border-rosebeige/40 text-xs tracking-widest uppercase text-rosebeige hover:bg-rosebeige hover:text-burgundy-950 transition-all duration-300 font-medium">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen pt-32 pb-16 px-6 md:px-16 relative flex flex-col justify-between overflow-hidden bg-gradient-to-b from-burgundy-900 via-burgundy-950 to-burgundy-950">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 -left-32 w-96 h-96 bg-burgundy-700/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-rosebeige-dark/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
+            
+            <!-- Hero Left Content -->
+            <div class="lg:col-span-7 z-10 space-y-8">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-[1px] bg-rosebeige-muted"></span>
+                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted font-medium">UI/UX Designer & Visual Specialist</span>
+                </div>
+
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-rosebeige leading-[1.05]">
+                    DESIGN <br>
+                    <span class="italic font-normal text-rosebeige-muted">with</span> INTENT
+                </h1>
+
+                <p class="text-base md:text-lg text-rosebeige/70 font-light max-w-xl leading-relaxed">
+                    I design digital experiences and evaluate visual media that are beautiful, intuitive, aesthetically elevated, and built to convert.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="flex flex-wrap items-center gap-5 pt-4">
+                    <a href="#work" class="group px-8 py-4 rounded-full bg-rosebeige text-burgundy-950 font-medium text-xs tracking-widest uppercase flex items-center space-x-3 hover:bg-rosebeige-muted transition-all duration-300 shadow-lg">
+                        <span>View My Work</span>
+                        <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <button onclick="downloadCV()" class="px-8 py-4 rounded-full border border-rosebeige/30 text-rosebeige font-medium text-xs tracking-widest uppercase flex items-center space-x-3 hover:border-rosebeige transition-all duration-300">
+                        <span>Download CV</span>
+                        <i class="fa-solid fa-download text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Right Arch Image -->
+            <div class="lg:col-span-5 flex justify-center items-center relative z-10">
+                <div class="relative w-full max-w-md">
+                    
+                    <!-- Decorative Arch Border Glow -->
+                    <div class="absolute -inset-1 rounded-t-[500px] bg-gradient-to-b from-rosebeige/30 to-transparent blur-sm"></div>
+
+                    <!-- Main Arch Frame -->
+                    <div class="arch-frame w-full aspect-[3/4] luxury-border bg-burgundy-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
+                             alt="Portrait" 
+                             class="w-full h-full object-cover object-center filter brightness-95 contrast-105 hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <!-- Decorative Badge Overlay -->
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-full border border-rosebeige/30 luxury-glass flex items-center justify-center p-2 animate-spin-slow">
+                        <svg class="w-full h-full text-rosebeige-muted" viewBox="0 0 100 100">
+                            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                            <text class="text-[10px] tracking-widest font-sans uppercase fill-current">
+                                <textPath href="#circlePath">
+                                    • USER-CENTERED • IMPACT-DRIVEN 
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+
+                    <!-- Initials Emblem Badge -->
+                    <div class="absolute bottom-4 right-4 w-16 h-16 rounded-full bg-burgundy-900/90 border border-rosebeige/40 flex items-center justify-center text-rosebeige font-serif text-xl shadow-xl">
+                        AM
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- HERO TICKER INFO BAR -->
+        <div class="max-w-7xl mx-auto w-full pt-16 border-t border-rosebeige/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs tracking-widest text-rosebeige/60 uppercase">
+            <div>
+                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Based In</span>
+                <span class="text-rosebeige">Guatemala City</span>
+            </div>
+            <div>
+                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Available For</span>
+                <span class="text-rosebeige">Freelance & Full-time</span>
+            </div>
+            <div>
+                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Signature</span>
+                <span class="font-script text-base text-rosebeige lowercase">Anna Moreau</span>
+            </div>
+            <div>
+                <span class="block text-rosebeige-muted/60 mb-1 text-[10px]">Mission</span>
+                <span class="text-rosebeige">Meaningful Digital Aesthetics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED WORK SECTION -->
+    <section id="work" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-950">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Selected Projects</span>
+                    <h2 class="font-serif text-4xl md:text-6xl text-rosebeige font-light">Featured Work</h2>
+                </div>
+                <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige-muted hover:text-rosebeige transition-colors flex items-center space-x-2 border-b border-rosebeige/20 pb-1 w-max">
+                    <span>View All Projects</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div onclick="openModal('LUMINA', 'E-Commerce Redesign', 'A luxury skincare e-commerce experience focusing on minimalist typography, rich textures, and seamless conversion paths.', 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800')" 
+                     class="group cursor-pointer luxury-hover-card luxury-glass rounded-2xl overflow-hidden border border-rosebeige/10 p-4">
+                    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" 
+                             alt="Lumina" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 w-10 h-10 rounded-full luxury-glass border border-rosebeige/30 flex items-center justify-center text-rosebeige opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="px-2 pb-2">
+                        <h3 class="font-serif text-2xl text-rosebeige mb-1 group-hover:text-rosebeige-muted transition-colors">LUMINA</h3>
+                        <p class="text-xs tracking-wider text-rosebeige-muted uppercase">E-Commerce Redesign</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div onclick="openModal('VIREO STUDIO', 'Creative Portfolio Website', 'Editorial digital showcase for a haute couture fashion photography atelier based in Paris.', 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800')" 
+                     class="group cursor-pointer luxury-hover-card luxury-glass rounded-2xl overflow-hidden border border-rosebeige/10 p-4">
+                    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" 
+                             alt="Vireo Studio" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 w-10 h-10 rounded-full luxury-glass border border-rosebeige/30 flex items-center justify-center text-rosebeige opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="px-2 pb-2">
+                        <h3 class="font-serif text-2xl text-rosebeige mb-1 group-hover:text-rosebeige-muted transition-colors">VIREO STUDIO</h3>
+                        <p class="text-xs tracking-wider text-rosebeige-muted uppercase">Creative Portfolio Website</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div onclick="openModal('AURORA LIVING', 'Luxury Brand Website', 'An immersive web experience celebrating high-end architectural interior design and bespoke furniture.', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800')" 
+                     class="group cursor-pointer luxury-hover-card luxury-glass rounded-2xl overflow-hidden border border-rosebeige/10 p-4">
+                    <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
+                             alt="Aurora Living" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 w-10 h-10 rounded-full luxury-glass border border-rosebeige/30 flex items-center justify-center text-rosebeige opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="px-2 pb-2">
+                        <h3 class="font-serif text-2xl text-rosebeige mb-1 group-hover:text-rosebeige-muted transition-colors">AURORA LIVING</h3>
+                        <p class="text-xs tracking-wider text-rosebeige-muted uppercase">Luxury Brand Website</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MY APPROACH SECTION -->
+    <section id="approach" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-900/40">
+        <div class="max-w-7xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Methodology</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-rosebeige font-light mb-16">My Approach</h2>
+
+            <!-- 5 Steps Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
+                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">01</span>
+                    <i class="fa-solid fa-magnifying-glass text-rosebeige-muted text-lg mb-4"></i>
+                    <h3 class="font-serif text-xl text-rosebeige mb-2">DISCOVER</h3>
+                    <p class="text-xs text-rosebeige/70 leading-relaxed">I dive deep into your goals, audience, brand DNA, and aesthetic challenges.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
+                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">02</span>
+                    <i class="fa-solid fa-compass text-rosebeige-muted text-lg mb-4"></i>
+                    <h3 class="font-serif text-xl text-rosebeige mb-2">DEFINE</h3>
+                    <p class="text-xs text-rosebeige/70 leading-relaxed">I craft visual strategy, information architecture, and core user flows.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
+                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">03</span>
+                    <i class="fa-solid fa-palette text-rosebeige-muted text-lg mb-4"></i>
+                    <h3 class="font-serif text-xl text-rosebeige mb-2">DESIGN</h3>
+                    <p class="text-xs text-rosebeige/70 leading-relaxed">I create UI that's stunning, intuitive, elevated, and strictly on-brand.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
+                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">04</span>
+                    <i class="fa-solid fa-code text-rosebeige-muted text-lg mb-4"></i>
+                    <h3 class="font-serif text-xl text-rosebeige mb-2">BUILD</h3>
+                    <p class="text-xs text-rosebeige/70 leading-relaxed">I collaborate with developers or build directly for pixel-perfect delivery.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 relative">
+                    <span class="font-serif text-3xl text-rosebeige-muted/40 block mb-4">05</span>
+                    <i class="fa-solid fa-sliders text-rosebeige-muted text-lg mb-4"></i>
+                    <h3 class="font-serif text-xl text-rosebeige mb-2">REFINE</h3>
+                    <p class="text-xs text-rosebeige/70 leading-relaxed">I test, iterate, and optimize for the highest quality user experience.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-16">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Detailed Analysis</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-rosebeige font-light">Case Studies</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Case Study 1 -->
+                <div class="luxury-glass p-6 rounded-2xl border border-rosebeige/10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-serif text-rosebeige-muted/60 mb-2 block">01</span>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-3">LUMINA RESTRUCTURING</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed mb-6">How we increased online conversions by 62% with a refined editorial aesthetic and frictionless checkout flow.</p>
+                    </div>
+                    <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige hover:text-rosebeige-muted flex items-center space-x-2">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="luxury-glass p-6 rounded-2xl border border-rosebeige/10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-serif text-rosebeige-muted/60 mb-2 block">02</span>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-3">VIREO BRAND DIRECTION</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed mb-6">Redesigning a high-fashion atelier portfolio that tells an authentic visual narrative through layout & motion.</p>
+                    </div>
+                    <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige hover:text-rosebeige-muted flex items-center space-x-2">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="luxury-glass p-6 rounded-2xl border border-rosebeige/10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-serif text-rosebeige-muted/60 mb-2 block">03</span>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-3">AURORA DIGITAL EXPERIENCE</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed mb-6">Building a boutique digital presence that inspires architects, high-net-worth clients, and luxury buyers.</p>
+                    </div>
+                    <a href="#contact" class="text-xs tracking-widest uppercase text-rosebeige hover:text-rosebeige-muted flex items-center space-x-2">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO / SERVICES SECTION -->
+    <section id="services" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-900/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <div class="lg:col-span-4">
+                    <span class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-2">✦ Capabilities</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-rosebeige font-light mb-6">Strategic Design. Seamless Experience. Real Impact.</h2>
+                    <p class="text-xs text-rosebeige/70 leading-relaxed mb-8">Elevating digital footprints with an eye for high fashion, symmetry, balance, and modern user experience excellence.</p>
+                </div>
+
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
+                        <i class="fa-solid fa-crop-simple text-rosebeige-muted text-2xl mb-4"></i>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-2">UI/UX DESIGN</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed">User-centered interfaces that look stunning, feel fluid, and work effortlessly across all device sizes.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
+                        <i class="fa-solid fa-desktop text-rosebeige-muted text-2xl mb-4"></i>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-2">WEB DESIGN</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed">Modern, responsive websites that elevate your brand story and engage users with memorable interactions.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
+                        <i class="fa-solid fa-eye text-rosebeige-muted text-2xl mb-4"></i>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-2">VISUAL CURATION & AI EVALUATION</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed">Expert qualitative image critique, aesthetic evaluation, lighting assessment, and visual data curation.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10">
+                        <i class="fa-solid fa-crown text-rosebeige-muted text-2xl mb-4"></i>
+                        <h3 class="font-serif text-2xl text-rosebeige mb-2">BRANDING & IDENTITY</h3>
+                        <p class="text-xs text-rosebeige/70 leading-relaxed">Cohesive visual identities, typography guidelines, and color systems that make your brand unforgettable.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <footer id="contact" class="py-24 px-6 md:px-16 border-t border-rosebeige/10 bg-burgundy-950 relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+                
+                <!-- Footer CTA Left -->
+                <div class="lg:col-span-7 space-y-8">
+                    <h2 class="font-serif text-5xl md:text-7xl text-rosebeige font-light leading-tight">
+                        Let's create <br>
+                        <span class="italic font-normal text-rosebeige-muted">something</span> extraordinary.
+                    </h2>
+
+                    <a href="mailto:hello@annamoreau.studio" class="inline-flex items-center space-x-4 px-8 py-4 rounded-full border border-rosebeige/30 text-rosebeige text-xs tracking-widest uppercase hover:bg-rosebeige hover:text-burgundy-950 transition-all duration-300">
+                        <span>Let's Work Together</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Footer Info Right -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div class="space-y-4 text-xs tracking-widest uppercase text-rosebeige/80">
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-regular fa-envelope text-rosebeige-muted"></i>
+                            <span>hello@annamoreau.studio</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-brands fa-instagram text-rosebeige-muted"></i>
+                            <span>@annam.design</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-brands fa-linkedin-in text-rosebeige-muted"></i>
+                            <span>linkedin.com/in/annamoreau</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-location-dot text-rosebeige-muted"></i>
+                            <span>Guatemala City, GT</span>
+                        </div>
+                    </div>
+
+                    <!-- Steve Jobs Quote Badge -->
+                    <div class="p-6 rounded-2xl luxury-glass border border-rosebeige/10 text-xs italic font-serif text-rosebeige/70 leading-relaxed">
+                        "Design is not just what it looks like and feels like. Design is how it works."
+                        <span class="block text-right text-[10px] uppercase font-sans text-rosebeige-muted mt-2 font-normal">— Steve Jobs</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-rosebeige/10 flex flex-col sm:flex-row items-center justify-between text-[10px] tracking-widest text-rosebeige-muted uppercase gap-4">
+                <p>© 2026 ANNA MOREAU STUDIO. ALL RIGHTS RESERVED.</p>
+                <p class="tracking-widest">STRATEGY • CREATIVITY • PURPOSE</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE PROJECT MODAL -->
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-burgundy-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-burgundy-900 border border-rosebeige/20 rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-rosebeige hover:text-rosebeige-muted text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="aspect-video rounded-xl overflow-hidden mb-6">
+                <img id="modalImg" src="" alt="Project" class="w-full h-full object-cover">
+            </div>
+            <span id="modalCategory" class="text-xs uppercase tracking-widest text-rosebeige-muted block mb-1"></span>
+            <h3 id="modalTitle" class="font-serif text-3xl text-rosebeige mb-3"></h3>
+            <p id="modalDesc" class="text-xs text-rosebeige/80 leading-relaxed mb-6"></p>
+            <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-rosebeige text-burgundy-950 text-xs uppercase tracking-widest font-medium">Close Overview</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Modal functions
+        function openModal(title, category, desc, imgSrc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalCategory').innerText = category;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalImg').src = imgSrc;
+            
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // CV Download trigger
+        function downloadCV() {
+            const msg = "CV Download triggered! (Replace with your direct PDF download link)";
+            const alertBox = document.createElement('div');
+            alertBox.className = "fixed bottom-6 right-6 z-50 px-6 py-3 rounded-xl luxury-glass border border-rosebeige/30 text-rosebeige text-xs tracking-wider uppercase shadow-2xl";
+            alertBox.innerText = msg;
+            document.body.appendChild(alertBox);
+            setTimeout(() => alertBox.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
