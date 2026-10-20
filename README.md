@@ -1,184 +1,206 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/__l5e/assets-v1/10727ae7-4f42-4011-9e48-bacf24d02931/delmy-portrait.png"/><link rel="stylesheet" href="/assets/styles-D6o0Il6n.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" data-precedence="default"/><title>Delmy Lopez | Creative &amp; Data Specialist</title><meta name="description" content="Delmy Lopez — legal document &amp; CRM data analyst, web page designer and content creator in Guatemala."/><meta property="og:title" content="Delmy Lopez | Creative &amp; Data Specialist"/><meta property="og:description" content="Precision in data. Elegance in web &amp; content."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><link rel="modulepreload" href="/assets/index-BQng53LO.js"/><link rel="modulepreload" href="/assets/routes-IZLANB7-.js"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delmy Lopez | Creative &amp; Data Specialist</title>
+<meta name="description" content="Delmy Lopez — analista de datos y documentos legales, diseñadora web y creadora de contenido en Guatemala.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap">
 <style>
-	#lovable-badge {
-		--badge-bg: #1b1b1b;
-		--badge-text: #c5c1b9;
-		--badge-text-hover: #dcdad5;
-		--badge-radius: 6px;
-		--badge-padding: 8px;
-		--badge-gap: 6px;
-		--badge-shadow: 
-			0 0 0 1px rgba(0, 0, 0, 0.88),
-			0 1px 0 0 rgba(0, 0, 0, 0.04),
-			0 2px 2px -1px rgba(0, 0, 0, 0.08),
-			0 4px 4px -2px rgba(0, 0, 0, 0.08),
-			0 8px 8px -4px rgba(0, 0, 0, 0.08),
-			0 16px 16px -8px rgba(0, 0, 0, 0.08);
-		--badge-transition-duration: 0.2s;
-		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
-		--focus-color: #575ECF;
-		--focus-offset: 2px;
-		--focus-width: 2px;
-		
-		position: fixed;
-		bottom: 12px;
-		right: 12px;
-		height: 24px;
-		display: flex;
-		align-items: center;
-		z-index: 1000000;
-		background-color: var(--badge-bg) !important;
-		color: var(--badge-text) !important;
-		border-radius: var(--badge-radius);
-		box-shadow: var(--badge-shadow) !important;
-		font-size: 12px;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-		font-weight: 400 !important;
-		text-transform: none !important;
-		font-feature-settings: normal !important;
-		transform: translateZ(0);
-		will-change: transform, opacity;
-		transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
-	}
+  :root { 
+    --radius: .625rem; 
+    --burgundy-950: oklch(13% .02 10); 
+    --burgundy-900: oklch(17% .03 5); 
+    --burgundy-800: oklch(22% .045 5); 
+    --burgundy-700: oklch(29% .065 5); 
+    --rose-gold: oklch(84% .045 40); 
+    --rose-soft: oklch(97% .01 40); 
+    --rose-accent: oklch(71% .06 35); 
+    --background: var(--burgundy-950); 
+    --foreground: var(--rose-soft); 
+    --card: var(--burgundy-900); 
+    --card-foreground: var(--rose-soft); 
+    --primary: var(--rose-gold); 
+    --primary-foreground: var(--burgundy-950); 
+    --secondary: var(--burgundy-800); 
+    --muted: var(--burgundy-800); 
+    --muted-foreground: oklch(97% .01 40 / .65); 
+    --accent: var(--burgundy-700); 
+    --border: oklch(84% .045 40 / .12); 
+  }
 
-	#lovable-badge.closing {
-		opacity: 0;
-		pointer-events: none;
-	}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background-color: var(--background); color: var(--foreground); font-family: "Inter", sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.5; }
+  
+  ::selection { background: var(--rose-gold); color: var(--burgundy-950); }
+  
+  /* Estilos generales y componentes */
+  header { position: fixed; inset-x: 0; top: 0; z-index: 50; border-bottom: 1px solid var(--border); background-color: color-mix(in oklab, var(--burgundy-950) 80%, transparent); backdrop-filter: blur(12px); }
+  .nav-container { max-width: 80rem; margin: 0 auto; display: flex; items-align: center; justify-content: space-between; padding: 1rem 1.5rem; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.5rem; font-weight: 300; letter-spacing: 0.05em; color: var(--rose-soft); text-decoration: none; }
+  .logo span { display: inline-block; height: 0.5rem; width: 0.5rem; border-radius: 9999px; background-color: var(--rose-gold); }
+  
+  nav.desktop-nav { display: none; gap: 2rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-foreground); }
+  nav.desktop-nav a { color: inherit; text-decoration: none; transition: color 0.2s; }
+  nav.desktop-nav a:hover { color: var(--rose-gold); }
+  
+  .btn-touch { display: none; border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--rose-gold) 30%, transparent); padding: 0.5rem 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--rose-gold); text-decoration: none; transition: all 0.2s; }
+  .btn-touch:hover { background-color: var(--rose-gold); color: var(--burgundy-950); }
 
-	#lovable-badge-cta {
-		display: flex;
-		align-items: baseline;
-		gap: var(--badge-gap);
-		box-sizing: border-box;
-		padding: 4px var(--badge-padding) 0;
-		height: 100%;
-		color: inherit;
-		text-decoration: none;
-		white-space: nowrap;
-		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
-		transition: 
-			background-color var(--badge-transition-duration) ease,
-			color var(--badge-transition-duration) ease,
-			transform 0.1s ease;
-	}
+  section { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 7rem 1.5rem 4rem 1.5rem; }
+  .max-w-7xl { max-width: 80rem; margin: 0 auto; width: 100%; }
 
-	#lovable-badge-cta:hover {
-		background: rgba(255, 255, 255, 0.04);
-		color: var(--badge-text-hover);
-	}
+  /* Hero Section */
+  .hero-grid { display: grid; gap: 3rem; align-items: center; grid-template-columns: 1fr; }
+  .hero-content { display: flex; flex-direction: column; gap: 1.5rem; text-align: center; }
+  .badge { display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--rose-gold) 20%, transparent); background-color: color-mix(in oklab, var(--burgundy-800) 80%, transparent); padding: 0.25rem 0.75rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--rose-gold); width: fit-content; margin: 0 auto; }
+  h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2.5rem; font-weight: 300; line-height: 1.2; letter-spacing: -0.025em; color: var(--rose-soft); }
+  h1 span { font-style: italic; font-weight: 400; color: var(--rose-gold); }
+  .hero-desc { max-width: 36rem; font-size: 1rem; font-weight: 300; line-height: 1.625; color: var(--muted-foreground); margin: 0 auto; }
+  
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+  .stat-item span:first-child { display: block; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.5rem; color: var(--rose-gold); }
+  .stat-item span:last-child { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted-foreground); }
 
-	#lovable-badge-cta:active {
-		transform: scale(0.98);
-	}
+  .hero-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding-top: 1rem; }
+  .btn-primary { border-radius: 9999px; background-color: var(--rose-gold); padding: 0.75rem 1.5rem; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--burgundy-950); text-decoration: none; box-shadow: 0 10px 15px -3px color-mix(in oklab, var(--rose-gold) 10%, transparent); transition: background-color 0.2s; }
+  .btn-primary:hover { background-color: var(--rose-soft); }
+  .btn-secondary { border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--rose-gold) 40%, transparent); padding: 0.75rem 1.5rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--rose-gold); text-decoration: none; transition: background-color 0.2s; }
+  .btn-secondary:hover { background-color: color-mix(in oklab, var(--rose-gold) 10%, transparent); }
 
-	#lovable-badge-cta:focus {
-		outline: none;
-	}
+  /* Secciones adicionales generadas */
+  .section-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2.25rem; font-weight: 300; color: var(--rose-soft); margin-bottom: 2rem; text-align: center; }
+  .content-box { background-color: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; }
+  .content-box h3 { font-size: 1.25rem; color: var(--rose-gold); margin-bottom: 0.5rem; font-weight: 500; }
+  .content-box p { color: var(--muted-foreground); font-size: 0.95rem; }
 
-	#lovable-badge-cta:focus-visible {
-		outline: var(--focus-width) solid var(--focus-color);
-		outline-offset: var(--focus-offset);
-		z-index: 1;
-	}
-
-	#lovable-badge-text {
-		line-height: 1;
-	}
-
-	#lovable-badge-logo {
-		position: relative;
-		display: block;
-		width: 52px;
-		height: 12px;
-	}
-
-	#lovable-badge-logo svg {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	#lovable-badge-divider {
-		width: 1px;
-		height: 24px;
-		background-color: rgba(255, 255, 255, 0.04);
-		flex-shrink: 0;
-	}
-
-	#lovable-badge-close {
-		width: 24px;
-		height: 24px;
-		min-width: 24px;
-		min-height: 24px;
-		cursor: pointer;
-		background: none;
-		border: none;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
-		flex-shrink: 0;
-		transition: 
-			background-color var(--badge-transition-duration) ease,
-			transform 0.1s ease;
-	}
-
-	#lovable-badge-close:hover {
-		background: rgba(255, 255, 255, 0.04);
-	}
-
-	#lovable-badge-close:active {
-		transform: scale(0.92);
-	}
-
-	#lovable-badge-close:focus {
-		outline: none;
-	}
-
-	#lovable-badge-close:focus-visible {
-		outline: var(--focus-width) solid var(--focus-color);
-		outline-offset: calc(var(--focus-offset) * -1);
-		z-index: 1;
-	}
-
-	#lovable-badge-close svg path {
-		fill: var(--badge-text);
-		transition: fill var(--badge-transition-duration) ease;
-	}
-
-	#lovable-badge-close:hover svg path {
-		fill: var(--badge-text-hover);
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		#lovable-badge,
-		#lovable-badge-cta,
-		#lovable-badge-close,
-		#lovable-badge-close svg path {
-			transition: none;
-		}
-		
-		#lovable-badge-cta:active,
-		#lovable-badge-close:active {
-			transform: none;
-		}
-	}
-
-	@media (prefers-contrast: high) {
-		#lovable-badge {
-			--badge-bg: #000;
-			--badge-text: #fff;
-			--badge-text-hover: #fff;
-			border: 2px solid currentColor;
-		}
-		
-		#lovable-badge-cta:focus-visible,
-		#lovable-badge-close:focus-visible {
-			outline-width: 3px;
-		}
-	}
+  /* Media Queries */
+  @media(min-width: 768px) {
+    nav.desktop-nav { display: flex; }
+    .btn-touch { display: inline-flex; }
+    .hero-grid { grid-template-columns: repeat(12, 1fr); gap: 3rem; }
+    .hero-content { grid-span: span 7; grid-column: span 7; text-align: left; }
+    .hero-content .badge, .hero-content .hero-buttons { margin: 0; justify-content: flex-start; }
+    .hero-desc { margin: 0; }
+    .hero-image-container { grid-column: span 5; display: flex; justify-content: center; }
+  }
 </style>
-<script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script><script defer src="/__l5e/events.124894084da8c432.js" data-artifact-kind="dwl_content_hash" data-artifact-id="e1a8148361e0beb362d9cee4763b9b776ac702c8a1e37750479a34658ab18709" data-commit-sha="1cc882443741c7f7e5f9965ec51cfd98630e8143" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF82MGN2d3Q3ZDJ0OGIwYW05ZDhwc2F4cWZ3eCIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiJlMWE4MTQ4MzYxZTBiZWIzNjJkOWNlZTQ3NjNiOWI3NzZhYzcwMmM4YTFlMzc3NTA0NzlhMzQ2NThhYjE4NzA5IiwiY29tbWl0X3NoYSI6IjFjYzg4MjQ0Mzc0MWM3ZjdlNWY5OTY1ZWM1MWNmZDk4NjMwZTgxNDMiLCJleHAiOjE3OTQ3MTUyMjF9.MvTdzadoHVbVTETZ5FnP8vMAEShq6IuxddaSP5guR_4"></script><meta name="twitter:title" content="Delmy Lopez | Creative &amp;amp; Data Specialist"><meta name="twitter:description" content="Precision in data. Elegance in web &amp;amp; content."><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_60cvwt7d2t8b0am9d8psaxqfwx/62135bbd5b366bb031946f468be931da_1792119314192.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_60cvwt7d2t8b0am9d8psaxqfwx/62135bbd5b366bb031946f468be931da_1792119314192.png"></head><body><!--$--><div><header class="fixed inset-x-0 top-0 z-50 border-b border-border bg-burgundy-950/80 backdrop-blur-md"><div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"><a href="#" class="flex items-center gap-2 font-serif text-2xl font-light tracking-wider text-rose-soft hover:text-rose-gold"><span class="inline-block h-2 w-2 rounded-full bg-rose-gold"></span> DELMY LOPEZ</a><nav class="hidden items-center space-x-8 text-xs uppercase tracking-widest text-muted-foreground md:flex"><a href="#about" class="transition-colors hover:text-rose-gold capitalize">about</a><a href="#education" class="transition-colors hover:text-rose-gold capitalize">education</a><a href="#experience" class="transition-colors hover:text-rose-gold capitalize">experience</a><a href="#certifications" class="transition-colors hover:text-rose-gold capitalize">certifications</a><a href="#skills" class="transition-colors hover:text-rose-gold capitalize">skills</a><a href="#contact" class="transition-colors hover:text-rose-gold capitalize">contact</a></nav><a href="mailto:marylenalopez.d@gmail.com" class="hidden rounded-full border border-rose-gold/30 px-4 py-2 text-xs uppercase tracking-widest text-rose-gold transition-all hover:bg-rose-gold hover:text-burgundy-950 sm:inline-flex">Get in Touch</a><button aria-label="Menu" class="text-rose-soft md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><section id="about" class="relative flex min-h-screen items-center justify-center overflow-hidden pb-16 pt-28"><div class="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-burgundy-700/20 blur-3xl"></div><div class="pointer-events-none absolute bottom-10 right-0 h-96 w-96 rounded-full bg-rose-accent/10 blur-3xl"></div><div class="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-12"><div class="order-2 space-y-6 text-center md:order-1 md:col-span-7 md:text-left"><div class="inline-flex items-center gap-2 rounded-full border border-rose-gold/20 bg-burgundy-800/80 px-3 py-1 text-xs uppercase tracking-widest text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-3.5 w-3.5" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> Data Analyst, Web Page Design &amp; Content Creator</div><h1 class="font-serif text-4xl font-light leading-tight tracking-tight text-rose-soft sm:text-6xl lg:text-7xl">Precision in Data.<br/><span class="italic font-normal text-rose-gold">Elegance</span> in Web &amp; Content.</h1><p class="mx-auto max-w-xl text-base font-light leading-relaxed text-muted-foreground sm:text-lg md:mx-0">Hello, I&#x27;m <strong class="font-normal text-rose-soft">Delmy Lopez</strong>. I specialize in critical legal document verification, CRM data processing, high attention-to-detail analysis, creative digital marketing strategy, and <span class="font-normal">web design</span>.</p><div class="grid grid-cols-3 gap-4 border-t border-border pt-4"><div><span class="block font-serif text-2xl text-rose-gold sm:text-3xl">100%</span><span class="text-xs uppercase tracking-wider text-muted-foreground">Accuracy</span></div><div><span class="block font-serif text-2xl text-rose-gold sm:text-3xl">3+ Yrs</span><span class="text-xs uppercase tracking-wider text-muted-foreground">Experience</span></div><div><span class="block font-serif text-2xl text-rose-gold sm:text-3xl">7+</span><span class="text-xs uppercase tracking-wider text-muted-foreground">Certificates</span></div></div><div class="flex flex-wrap justify-center gap-4 pt-4 md:justify-start"><a href="#experience" class="rounded-full bg-rose-gold px-6 py-3 text-xs font-medium uppercase tracking-widest text-burgundy-950 shadow-lg shadow-rose-gold/10 transition-all hover:bg-rose-soft">View Experience</a><a href="#contact" class="rounded-full border border-rose-gold/40 px-6 py-3 text-xs uppercase tracking-widest text-rose-gold transition-all hover:bg-rose-gold/10">Contact Me</a></div></div><div class="order-1 flex justify-center md:order-2 md:col-span-5"><div class="group relative w-full max-w-xs sm:max-w-sm"><div class="absolute -inset-1 rounded-[180px] bg-gradient-to-b from-rose-gold/40 via-burgundy-700/30 to-rose-accent/20 opacity-70 blur-lg transition duration-500 group-hover:opacity-100"></div><div class="relative overflow-hidden rounded-b-3xl rounded-t-[180px] border border-rose-gold/30 bg-burgundy-900/80 p-2 shadow-2xl"><div class="arch-frame relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-gradient-to-b from-burgundy-800 to-burgundy-950"><img src="/__l5e/assets-v1/10727ae7-4f42-4011-9e48-bacf24d02931/delmy-portrait.png" alt="Delmy Lopez" class="h-full w-full object-cover object-[38%_center] transition-transform duration-700 group-hover:scale-105"/><div class="absolute inset-0 bg-gradient-to-t from-burgundy-950/80 via-transparent to-transparent"></div></div></div></div></div></div></section><section id="education" class="border-t border-border bg-burgundy-900/60 py-20"><div class="mx-auto max-w-7xl px-6"><div class="mx-auto mb-16 max-w-2xl text-center"><h2 class="mb-2 text-xs uppercase tracking-widest text-rose-gold">Academic Background</h2><h3 class="font-serif text-3xl font-light text-rose-soft sm:text-5xl">Higher Education</h3><div class="mx-auto mt-4 h-0.5 w-12 bg-rose-gold"></div></div><div class="glass-card mx-auto max-w-4xl rounded-2xl p-8"><div class="mb-6 flex flex-col items-start justify-between gap-4 border-b border-border pb-6 md:flex-row md:items-center"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">Currently Enrolled • 1st Year, 2nd Semester</span><h4 class="mt-1 font-serif text-3xl text-rose-soft sm:text-4xl">Licenciatura en Mercadotecnia (Marketing)</h4><p class="mt-2 flex items-center gap-1.5 text-sm font-light text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap h-4 w-4 text-rose-gold" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg> Universidad Mariano Gálvez de Guatemala</p></div><div class="whitespace-nowrap rounded-full border border-rose-gold/30 bg-burgundy-800 px-4 py-2 text-xs font-medium uppercase tracking-wider text-rose-gold">In Progress</div></div><h5 class="mb-4 flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-4 w-4" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg> Current Semester Coursework (Pensum)</h5><div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"><div class="flex items-center rounded-xl border border-rose-gold/15 bg-burgundy-950/60 p-5"><h6 class="text-sm font-medium text-rose-soft">Lenguaje e Investigación Documental</h6></div><div class="flex items-center rounded-xl border border-rose-gold/15 bg-burgundy-950/60 p-5"><h6 class="text-sm font-medium text-rose-soft">Matemática Aplicada II</h6></div><div class="flex items-center rounded-xl border border-rose-gold/15 bg-burgundy-950/60 p-5"><h6 class="text-sm font-medium text-rose-soft">Administración de Negocios II</h6></div><div class="flex items-center rounded-xl border border-rose-gold/15 bg-burgundy-950/60 p-5"><h6 class="text-sm font-medium text-rose-soft">Legislación Mercantil</h6></div><div class="flex items-center rounded-xl border border-rose-gold/15 bg-burgundy-950/60 p-5 sm:col-span-2"><h6 class="text-sm font-medium text-rose-soft">Psicología del Consumidor</h6></div></div></div></div></section><section id="experience" class="bg-burgundy-900/40 py-20"><div class="mx-auto max-w-7xl px-6"><div class="mx-auto mb-16 max-w-2xl text-center"><h2 class="mb-2 text-xs uppercase tracking-widest text-rose-gold">Professional Career</h2><h3 class="font-serif text-3xl font-light text-rose-soft sm:text-5xl">Work Experience</h3><div class="mx-auto mt-4 h-0.5 w-12 bg-rose-gold"></div></div><div class="grid gap-8 md:grid-cols-2"><div class="glass-card rounded-2xl p-8"><div class="mb-4 flex items-start justify-between"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">Current Role</span><h4 class="mt-1 font-serif text-2xl text-rose-soft">Icon</h4></div><div class="flex h-10 w-10 items-center justify-center rounded-full border border-rose-gold/20 bg-burgundy-800 text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale h-5 w-5" aria-hidden="true"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg></div></div><h5 class="mb-3 text-sm font-medium text-rose-soft/80">Legal Lawsuit Document &amp; CRM Quality Analyst</h5><ul class="space-y-2.5 text-sm font-light text-muted-foreground"><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Review and audit legal lawsuit documentation containing high-priority sensitive information.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Demonstrate rigorous attention to detail to ensure 100% compliance and error-free legal records.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Process, organize, and extract key case data into client CRM management systems seamlessly.</span></li></ul></div><div class="glass-card rounded-2xl p-8"><div class="mb-4 flex items-start justify-between"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">Dec 2024 - May 2025</span><h4 class="mt-1 font-serif text-2xl text-rose-soft">Conduent</h4></div><div class="flex h-10 w-10 items-center justify-center rounded-full border border-rose-gold/20 bg-burgundy-800 text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check-corner h-5 w-5" aria-hidden="true"><path d="M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m14 20 2 2 4-4"></path></svg></div></div><h5 class="mb-3 text-sm font-medium text-rose-soft/80">Back Office Specialist</h5><ul class="space-y-2.5 text-sm font-light text-muted-foreground"><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Reviewed and verified complex documentation to align with strict internal procedures and client standards.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Handled sensitive data with high discretion adhering to strict international data privacy protocols.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Coordinated efficiently across cross-functional teams and client communication channels.</span></li></ul></div><div class="glass-card rounded-2xl p-8"><div class="mb-4 flex items-start justify-between"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">Aug 2023 - Dec 2024</span><h4 class="mt-1 font-serif text-2xl text-rose-soft">TELUS International</h4></div><div class="flex h-10 w-10 items-center justify-center rounded-full border border-rose-gold/20 bg-burgundy-800 text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div></div><h5 class="mb-3 text-sm font-medium text-rose-soft/80">Customer Care &amp; Trainer Team Member</h5><ul class="space-y-2.5 text-sm font-light text-muted-foreground"><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Assisted international client accounts, delivering detailed product insights and resolving complex inquiries.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Selected to join the Trainers Team to onboard and mentor new account representatives.</span></li></ul></div><div class="glass-card rounded-2xl p-8"><div class="mb-4 flex items-start justify-between"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">Feb 2022 - Jun 2022</span><h4 class="mt-1 font-serif text-2xl text-rose-soft">Ministerio de Desarrollo Social</h4></div><div class="flex h-10 w-10 items-center justify-center rounded-full border border-rose-gold/20 bg-burgundy-800 text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 h-5 w-5" aria-hidden="true"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg></div></div><h5 class="mb-3 text-sm font-medium text-rose-soft/80">Administrative Assistant</h5><ul class="space-y-2.5 text-sm font-light text-muted-foreground"><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Supported social welfare management in San Antonio La Paz with document processing in Word &amp; Excel.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Managed public beneficiary registry input in official government database systems.</span></li></ul></div><div class="glass-card rounded-2xl p-8 md:col-span-2"><div class="mb-4 flex items-start justify-between"><div><span class="text-xs font-medium uppercase tracking-widest text-rose-gold">University Projects</span><h4 class="mt-1 font-serif text-2xl text-rose-soft">Academic Projects</h4></div><div class="flex h-10 w-10 items-center justify-center rounded-full border border-rose-gold/20 bg-burgundy-800 text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap h-5 w-5" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></div></div><h5 class="mb-3 text-sm font-medium text-rose-soft/80">Web Page Design &amp; Product Campaign</h5><ul class="space-y-2.5 text-sm font-light text-muted-foreground md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-2.5"><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Designed and built web pages from concept to layout, turning project briefs into clear, well-structured visuals.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Created a full marketing campaign for a product, covering positioning, target audience and promotional content.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Created and designed images for new products, shaping how each one is presented visually.</span></li><li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-0.5 h-4 w-4 shrink-0 text-rose-gold" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Worked in teams to plan, present and deliver each project on schedule.</span></li></ul></div></div></div></section><section id="certifications" class="border-t border-border py-20"><div class="mx-auto max-w-7xl px-6"><div class="mx-auto mb-16 max-w-2xl text-center"><h2 class="mb-2 text-xs uppercase tracking-widest text-rose-gold">Continuous Learning</h2><h3 class="font-serif text-3xl font-light text-rose-soft sm:text-5xl">Certifications &amp; Diplomas</h3><p class="mt-3 text-sm font-light text-muted-foreground">Verified coursework from Platzi and INTECAP</p><div class="mx-auto mt-4 h-0.5 w-12 bg-rose-gold"></div></div><div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2026</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Basic Programming</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">16 hours theory &amp; practice. Fundamental coding logic &amp; structure.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2026</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Lovable Web Creation</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">10 hours theory &amp; practice. No-code web development and platform design.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2022</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Marca Personal</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">11 hours. Personal branding strategy, storytelling &amp; audience engagement.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2022</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Marketing Content Strategy</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">3 hours. Marketing content strategy and digital audio concepts.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2022</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Mobile Phone Photography</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">17 hours. Mobile visual composition, framing, photo editing &amp; aesthetic lighting.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2022</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Marketing Digital</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">17 hours. Digital ad campaigns, brand positioning &amp; funnel optimization.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">PLATZI</span><span>2020</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">English Writing</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">7 hours. Intermediate business English grammar, structure &amp; professional email syntax.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Verified ID</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div><div class="glass-card flex flex-col justify-between rounded-2xl p-6"><div><div class="mb-3 flex items-center justify-between text-xs text-muted-foreground"><span class="rounded-full bg-burgundy-800 px-2 py-0.5 font-medium tracking-widest text-rose-gold">INTECAP</span><span>Scholarship</span></div><h4 class="mb-2 font-serif text-xl text-rose-soft">Finishing School</h4><p class="text-xs font-light leading-relaxed text-muted-foreground">Intensive English language immersion and global business communication training.</p></div><div class="mt-5 flex items-center justify-between border-t border-border pt-4 text-xs uppercase tracking-wider text-rose-accent"><span>Scholarship Award</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div></div></div></div></section><section id="skills" class="bg-burgundy-900/60 py-20"><div class="mx-auto grid max-w-7xl items-start gap-12 px-6 md:grid-cols-2"><div><h2 class="mb-2 text-xs uppercase tracking-widest text-rose-gold">Core Competencies</h2><h3 class="font-serif text-3xl font-light text-rose-soft sm:text-5xl">Skills &amp; Languages</h3><p class="mt-4 font-light text-muted-foreground">Combining procedural precision for legal document processing with creative marketing and visual communication capabilities.</p><div class="mt-8 space-y-5"><h4 class="text-xs uppercase tracking-widest text-rose-gold">Language Proficiency</h4><div><div class="mb-2 flex justify-between text-sm"><span class="text-rose-soft">Spanish</span><span class="text-xs text-muted-foreground">Native / Fluent</span></div><div class="h-1 w-full overflow-hidden rounded-full bg-burgundy-800"><div class="h-full rounded-full bg-gradient-to-r from-rose-accent to-rose-gold" style="width:100%"></div></div></div><div><div class="mb-2 flex justify-between text-sm"><span class="text-rose-soft">Portuguese</span><span class="text-xs text-muted-foreground">Beginner</span></div><div class="h-1 w-full overflow-hidden rounded-full bg-burgundy-800"><div class="h-full rounded-full bg-gradient-to-r from-rose-accent to-rose-gold" style="width:20%"></div></div></div></div></div><div class="grid grid-cols-2 gap-4"><div class="glass-card rounded-2xl p-6 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left mx-auto mb-3 h-6 w-6 text-rose-gold" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg><h5 class="text-sm font-medium text-rose-soft">Web Page Design</h5><p class="mt-1 text-xs text-muted-foreground">UX/UI &amp; Layouts</p></div><div class="glass-card rounded-2xl p-6 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check mx-auto mb-3 h-6 w-6 text-rose-gold" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><h5 class="text-sm font-medium text-rose-soft">Attention to Detail</h5><p class="mt-1 text-xs text-muted-foreground">Lawsuit verification</p></div><div class="glass-card rounded-2xl p-6 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database mx-auto mb-3 h-6 w-6 text-rose-gold" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg><h5 class="text-sm font-medium text-rose-soft">CRM Processing</h5><p class="mt-1 text-xs text-muted-foreground">Client management</p></div><div class="glass-card rounded-2xl p-6 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock mx-auto mb-3 h-6 w-6 text-rose-gold" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><h5 class="text-sm font-medium text-rose-soft">Data Privacy</h5><p class="mt-1 text-xs text-muted-foreground">Confidential handling</p></div><div class="glass-card rounded-2xl p-6 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera mx-auto mb-3 h-6 w-6 text-rose-gold" aria-hidden="true"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"></path><circle cx="12" cy="13" r="3"></circle></svg><h5 class="text-sm font-medium text-rose-soft">Mobile Photography</h5><p class="mt-1 text-xs text-muted-foreground">Visual curation</p></div><div class="glass-card rounded-2xl p-6 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-earth mx-auto mb-3 h-6 w-6 text-rose-gold" aria-hidden="true"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"></path><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"></path><circle cx="12" cy="12" r="10"></circle></svg><h5 class="text-sm font-medium text-rose-soft">English C1</h5><p class="mt-1 text-xs text-muted-foreground">Fluent Communication</p></div></div></div></section><section id="contact" class="border-t border-border py-24"><div class="mx-auto max-w-3xl px-6 text-center"><span class="text-xs uppercase tracking-widest text-rose-gold">Let&#x27;s Connect</span><h2 class="mt-2 font-serif text-4xl font-light text-rose-soft sm:text-6xl">Start a Conversation</h2><p class="mx-auto mt-4 max-w-xl font-light text-muted-foreground">Whether you have a query regarding legal data auditing, CRM management, or creative projects, feel free to reach out.</p><div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row"><a href="mailto:marylenalopez.d@gmail.com" class="glass-card flex items-center justify-center gap-3 rounded-full px-6 py-4 text-sm text-rose-soft hover:text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-4 w-4 text-rose-gold" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg> marylenalopez.d@gmail.com</a><a href="tel:+50246042084" class="glass-card flex items-center justify-center gap-3 rounded-full px-6 py-4 text-sm text-rose-soft hover:text-rose-gold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4 text-rose-gold" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg> +502 4604 2084</a></div><div class="mt-8 flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-rose-gold" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Guatemala City, Guatemala</div></div></section><footer class="border-t border-border py-8"><div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-xs text-muted-foreground sm:flex-row"><p class="font-serif text-lg text-rose-soft">Delmy Lopez</p><p>© 2026 Delmy Marylena López López. All rights reserved.</p><a href="https://platzi.com/@delmylopez/" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 hover:text-rose-gold">Platzi Profile <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></footer></div><script>(function(a,f){let l;try{l=JSON.parse(sessionStorage.getItem(a)||"{}")}catch{return}const n=l?.[f||history.state?.__TSR_key];let c=!1;for(const t in n){const e=n[t],o=e?.scrollX,s=e?.scrollY;if(Number.isFinite(o)&&Number.isFinite(s)){if(t==="window")scrollTo(o,s),c=!0;else if(t)try{const r=document.querySelector(t);r&&(r.scrollLeft=o,r.scrollTop=s)}catch{}}}if(c)return;const i=location.hash.slice(1);if(i){const t=history.state?.__hashScrollIntoViewOptions??!0;if(t){const e=document.getElementById(i);e&&e.scrollIntoView(t)}return}scrollTo(0,0)})("tsr-scroll-restoration-v1_3");document.currentScript.remove()</script><!--/$--><script data-tsr-stream-part="">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/index-BQng53LO.js"],scripts:$R[5]=[$R[6]={attrs:$R[7]={type:"module",async:!0,src:"/assets/index-BQng53LO.js"}}]},"/":$R[8]={preloads:$R[9]=["/assets/routes-IZLANB7-.js"]}}},matches:$R[10]=[$R[11]={i:"__root__ ",u:1792123221239,s:"success",ssr:!0},$R[12]={i:"  ",u:1792123221239,s:"success",ssr:!0}]})($R["tsr"]);$_TSR.e();{let s=document.currentScript,p;while((p=s.previousElementSibling)&&p.hasAttribute('data-tsr-stream-part'))p.remove();s.remove()}</script><script type="module" async="" src="/assets/index-BQng53LO.js"></script><script>document.currentScript.remove();/*$tsr-stream-boundary*/</script>
-</body></html>
+</head>
+<body>
+
+  <!-- Barra de Navegación -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span></span> DELMY LOPEZ
+      </a>
+      <nav class="desktop-nav">
+        <a href="#about">Sobre mí</a>
+        <a href="#education">Educación</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#certifications">Certificaciones</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <a href="mailto:marylenalopez.d@gmail.com" class="btn-touch">Contactar</a>
+    </div>
+  </header>
+
+  <!-- Sección Principal / Hero -->
+  <section id="about">
+    <div class="max-t-7xl max-w-7xl">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            Data Analyst, Web Page Design &amp; Content Creator
+          </div>
+          <h1>DESIGN<br><span>con</span> INTENTO</h1>
+          <p class="hero-desc">
+            Hola, soy <strong>Delmy Lopez</strong>. Me especializo en la verificación crítica de documentos legales, procesamiento de datos CRM, análisis detallado, estrategia de marketing digital y diseño web.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span>100%</span>
+              <span>Precisión</span>
+            </div>
+            <div class="stat-item">
+              <span>3+ Años</span>
+              <span>Experiencia</span>
+            </div>
+            <div class="stat-item">
+              <span>7+</span>
+              <span>Certificados</span>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a href="#experience" class="btn-primary">Ver Experiencia</a>
+            <a href="#contact" class="btn-secondary">Contacto</a>
+          </div>
+        </div>
+        <div class="hero-image-container" style="display: flex; justify-content: center; align-items: center;">
+          <!-- Contenedor visual estético acorde al diseño original con bordes redondeados y tonos borgoña -->
+          <div style="width: 260px; height: 320px; background: linear-gradient(to bottom, var(--burgundy-800), var(--burgundy-900)); border: 1.5px solid color-mix(in oklab, var(--rose-gold) 30%, transparent); border-top-left-radius: 150px; border-top-right-radius: 150px; border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: var(--rose-gold); font-weight: 300;">DL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Educación -->
+  <section id="education" style="min-height: auto; padding: 5rem 1.5rem;">
+    <div class="max-w-7xl">
+      <h2 class="section-title">Educación</h2>
+      <div class="content-box">
+        <h3>Universidad Mariano Gálvez de Guatemala</h3>
+        <p>Estudiante de primer año en el campus central (Zona 2), enfocada en disciplinas administrativas, económicas y del entorno digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Experiencia -->
+  <section id="experience" style="min-height: auto; padding: 5rem 1.5rem;">
+    <div class="max-w-7xl">
+      <h2 class="section-title">Experiencia Profesional</h2>
+      <div class="content-box">
+        <h3>Especialista en Datos y Verificación Documental</h3>
+        <p>Enfoque riguroso en el análisis de documentos legales, procesamiento eficiente en CRM y garantía de calidad con alta atención al detalle.</p>
+      </div>
+      <div class="content-box">
+        <h3>Diseño Web &amp; Creación de Contenido</h3>
+        <p>Desarrollo de interfaces web funcionales, estilizadas y propuestas de marketing digital orientadas a resultados comerciales y de marca.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Certificaciones y Habilidades -->
+  <section id="skills" style="min-height: auto; padding: 5rem 1.5rem;">
+    <div class="max-w-7xl">
+      <h2 class="section-title">Habilidades y Certificaciones</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="content-box" style="margin-bottom: 0;">
+          <h3>Análisis de Datos</h3>
+          <p>Manejo de sistemas CRM, procesamiento avanzado y verificación de bases de datos con precisión milimétrica.</p>
+        </div>
+        <div class="content-box" style="margin-bottom: 0;">
+          <h3>Diseño &amp; Multimedia</h3>
+          <p>Creación de sitios web personalizados, optimización visual y estrategias de contenido creativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contact" style="padding: 5rem 1.5rem 6rem 1.5rem;">
+    <div class="max-w-7xl" style="text-align: center;">
+      <h2 class="section-title">¿Trabajamos Juntos?</h2>
+      <p style="color: var(--muted-foreground); margin-bottom: 2rem; max-width: 30rem; margin-left: auto; margin-right: auto;">
+        Siempre estoy abierta a nuevos proyectos, consultas profesionales o colaboraciones creativas. ¡Escríbeme!
+      </p>
+      <a href="mailto:marylenalopez.d@gmail.com" class="btn-primary">Enviar un Correo</a>
+    </div>
+  </section>
+
+</body>
+</html>
